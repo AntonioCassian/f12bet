@@ -317,7 +317,6 @@ export default {
     border-top: 2px solid #81817f;
     padding: 3px 1px;
     background: #3d3d3c;
-    line-heigt: 17px;    
 }
 .times-compet:hover{
     background: #2e2e2d;
