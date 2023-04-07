@@ -214,35 +214,15 @@ export default {
     name:'TabelaMain',
     data(){
         return {
-            futebol_jogos: [
-            {id: 1, data:"04/04", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 2, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 3, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 4, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 5, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 6, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 7, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 8, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 9, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"},
-            {id: 10, data:"04/05", hora:"16:00", time1: "Chelsea", time2:"Liverpool", um: 2.25, empat: 3.43, dois: 3.19, pessoas: "+1185"}
-            ],
-            basquete_jogos: [
-                {id: 1, data:"06/04", hora:"15:45", time1: "Real Madrid", time2:"FC Bayern Muncher", um: 1.06, dois: 7.80, pessoas: "+151"},
-                {id: 2, data:"06/04", hora:"15:45", time1: "Real Madrid", time2:"FC Bayern Muncher", um: 1.06, dois: 7.80, pessoas: "+151"},
-                {id: 3, data:"06/04", hora:"15:45", time1: "Real Madrid", time2:"FC Bayern Muncher", um: 1.06, dois: 7.80, pessoas: "+151"},
-                {id: 4, data:"06/04", hora:"15:45", time1: "Real Madrid", time2:"FC Bayern Muncher", um: 1.06, dois: 7.80, pessoas: "+151"},
-            ],
-            tenis_jogos: [
-                {id: 1, data:"06/04", hora:"14:20", time1: "Bautista-Agut, Roberto", time2:"Halys, Quentin", um: 1.58, dois: 2.29, pessoas: "+20"},
-            ],
             selecionado: false
         }
     },
     methods: {
         basquete(){
             this.selecionado = !this.selecionado
-        }
-    }
+        },
+    },
+    props: ['futebol_jogos', 'basquete_jogos', 'tenis_jogos']
 }
 </script>
 
