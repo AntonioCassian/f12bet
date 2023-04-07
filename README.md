@@ -30,4 +30,5 @@ Concertar a sublista do Menu
 Fazer o slide
 Comunicação entre componente Boletim e a tabela
 Função clic nos botões acima da tabela com seus respectivos resultados
+Adicionar os icones
 ```
