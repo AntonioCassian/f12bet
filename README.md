@@ -32,3 +32,7 @@ Comunicação entre componente Boletim e a tabela
 Função clic nos botões acima da tabela com seus respectivos resultados
 Adicionar os icones
 ```
+
+
+15hrs-16hrs: Estudando comunicação entre compoents
+21hrs-23hrs: se aprofundando em conventional commits
