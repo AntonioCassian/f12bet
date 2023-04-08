@@ -50,47 +50,49 @@
             <li class="item">
                 <div class="component" @click="item.open = !item.open">
                     <div class="iconMenu">
-                        <img :src="item.src" alt="">
+                        <img :src="item.src"  alt="">
                     <span>{{ item.text }}</span>
                     </div>
                     <span class="number">{{ item.aovivo }}</span>
                 </div>
-                <ul v-if="item.open == true">
-                    <li class="item">
-                        <div class="component">
-                            <p>Brasil</p>
-                            <span class="number">1</span>
-                        </div>
-                        <ul v-show="isOpen">
-                            <li class="opcao">
-                                U20 Carioca, Serie A
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div v-show="item.open">
+                    <ul  v-for="sublist in sub_Pasta" :key="sublist.id">
+                        <li class="item">
+                            <div class="component" @click="sublist.open = !sublist.open">
+                                <p>{{ sublist.pais }}</p>
+                                <span class="number">{{ sublist.aoVivo }}</span>
+                            </div>
+                            <ul v-for="jogo in campeonatos" :key="jogo.id">
+                                <li class="opcao" >
+                                <span v-show="sublist.open">{{ jogo.campeonato }}</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <div class="preTitulo">
             <p>Longo Prazo</p>
         </div>
-        <ul class="lista" @click="toggle()" v-for="item in list_Menu" :key="item.id">
+        <ul class="lista">
             <li class="item">
                 <div class="component">
                     <div class="iconMenu">
-                        <img :src='item.src' alt="">
-                    <span>{{ item.text }}</span>
+                        <img src="@/../public/img/iconsMenu/1.png" alt="">
+                    <span>jhdbcjshdbc</span>
                     </div>
-                    <span class="number">{{ item.aovivo }}</span>
+                    <span class="number">cscdcds</span>
                 </div>
-                <ul @click="toggle()" v-show="isOpen">
+                <ul  >
                     <li class="item">
                         <div class="component">
-                            <p>Brasil</p>
-                            <span class="number">1</span>
+                            <p>rwwerrrr</p>
+                            <span class="number">ewewdsas</span>
                         </div>
-                        <ul v-show="isOpen">
+                        <ul>
                             <li class="opcao">
-                                U20 Carioca, Serie A
+                            sdcsdcsdcsd
                             </li>
                         </ul>
                     </li>
@@ -102,6 +104,7 @@
 
 <script>
 export default {
+    name: 'MenuBar',
     data() {
         return{
             isOpen: false,
@@ -128,6 +131,14 @@ export default {
                 {id: 20, src:"@/../public/img/iconsMenu/1.png", text: "Floorball", aovivo: 3, open: false},
                 {id: 21, src:"@/../public/img/iconsMenu/1.png", text: "Curling", aovivo: 3, open: false},
                 {id: 22, src:"@/../public/img/iconsMenu/1.png", text: "Futebol australiano", aovivo: 3, open: false}
+            ],
+            sub_Pasta: [
+                {id: 1, pais:'Brasil', aoVivo:2, open: false},
+                {id: 2, pais:'Argentina', aoVivo:2, open: false}
+            ],
+            campeonatos:[
+                {id: 1, campeonato:'Brasileirão Série A'},
+                {id: 2, campeonato:'Brasileirão Série B'}
             ],
             longoPrazo: [
                 {id: 1, src:"@/../public/img/iconsMenu/100.png", text: "Futebol", aovivo: 3},

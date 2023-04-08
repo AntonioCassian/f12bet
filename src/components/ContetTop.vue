@@ -96,9 +96,9 @@
         width: 90%;
         padding: 0 10px;
     }
-    button{
+    .form-content button{
         position: absolute;
-        top: 140px;
+        top: 145px;
         left: 260px;
         z-index: 9999;
         width: 20px;

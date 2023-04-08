@@ -4,7 +4,6 @@
             <span>A=-</span>
             <span>Boletim de Aposta</span>
         </div>
-            <p v-if="!aposta"> Nenhuna aposta encontrada!</p>
         <tbody >
             <tr class="titulo-tr" >
                 <td colspan="6">
@@ -19,7 +18,7 @@
                         <span class="jogada" >1x2</span>
                     </td>
                     <td class="number" >
-                        <span class="jogada" >{{ botao.id }}</span>
+                        <span class="jogada" >2.05</span>
                         <span class="jogada cancel" >x</span>
                     </td>
                     </tr>
@@ -65,18 +64,12 @@
 </template>
 
 <script>
-import barramento from '@/barramento';
 export default {
     name: 'BoletimAposta',
     data(){
         return{
-           botao : null
+            aposta: null
         }
-    },
-    created() {
-        barramento.onSelect(botao => {
-            this.botao = botao
-        })
     }
 }
 </script>

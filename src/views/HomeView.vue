@@ -8,7 +8,11 @@
       </aside>
       <main>
         <Picture />
-        <TabelaMain />
+        <TabelaMain 
+        :futebol_jogos="futebol_jogos"
+        :basquete_jogos="basquete_jogos"
+        :tenis_jogos="tenis_jogos"
+         />
       </main>
       <aside>
         <BoletimAposta/>
