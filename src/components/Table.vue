@@ -103,7 +103,7 @@
 
                     <!--conteudo da tabela -->
 
-                    <tr class="times-compet" v-for="jogo in futebol_jogos" :key="jogo.id">
+                    <tr class="times-compet" v-for="jogo in futebol_jogos" :key="jogo.id" @click="setBotao(botao)">
             
                     <td class="data-time">
                         <span class="data">{{ jogo.data }}</span><span class="sep">|</span><span class="time">{{ jogo.hora }}</span>
@@ -119,7 +119,10 @@
                     </td>
 
                     <td class="number">
-                        <a href=""><span>{{ jogo.um }}</span></a>
+                        <a href=""><span
+                            >
+                            {{ jogo.um }}
+                            </span></a>
                     </td>
 
                     <td style="width: 3px"></td>
@@ -192,7 +195,9 @@
                     <td style="width: 3px"></td>
 
                     <td class="number">
-                        <a href=""><span>{{ jogo.dois }}</span></a>
+                        <a href="" 
+                        
+                        ><span>{{ jogo.dois }}</span></a>
                     </td>
 
                     
@@ -210,19 +215,28 @@
 </template>
 
 <script>
+import barramento from '@/barramento'
 export default {
     name:'TabelaMain',
     data(){
         return {
-            selecionado: false
+           
         }
     },
     methods: {
         basquete(){
             this.selecionado = !this.selecionado
         },
+        setSelect(botao) {
+            barramento.setSelect(botao)
+        }
+
     },
-    props: ['futebol_jogos', 'basquete_jogos', 'tenis_jogos']
+    props: [
+        {futebol_jogos: Array},
+        {basquete_jogos: Array},
+        {tenis_jogos: Array}
+    ]
 }
 </script>
 
