@@ -3,7 +3,7 @@
         <NavBar />
         <div class="btns">
             <button class="btn1">ENTRAR</button>
-            <button class="btn1 btn2">Registro</button>
+            <button class="btn1 btn2" @click="register">Registro</button>
         </div>
     </header>
     <LineTop />
@@ -18,6 +18,11 @@ export default {
     components: {
         NavBar,
         LineTop
+    },
+    methods: {
+        register(){
+            this.$router.push({path:'/register'})
+        }
     }
 }
 </script>

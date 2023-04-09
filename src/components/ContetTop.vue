@@ -95,11 +95,12 @@
     .form-content{
         width: 90%;
         padding: 0 10px;
+        position: relative;
     }
     .form-content button{
         position: absolute;
-        top: 145px;
-        left: 260px;
+        top: 3px;
+        right: 10px;
         z-index: 9999;
         width: 20px;
         height: 20px;

@@ -47,7 +47,7 @@ export default {
         margin-right: 8px;
 
     }
-    a:active{
+    .active{
         color: #C9F73C;
     }
 </style>

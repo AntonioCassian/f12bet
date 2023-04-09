@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <ComHeader />
+    <Header />
     <div class="container">
       <aside>
         <ContentTop />
@@ -18,29 +18,29 @@
         <BoletimAposta/>
       </aside>
     </div>
-      <FooterApp />
+      <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ComHeader from '@/components/Header.vue'
+import Header from '@/components/Header.vue'
 import Picture from '@/components/Picture.vue'
 import ContentTop from '@/components/ContetTop.vue'
 import TabelaMain from '@/components/Table.vue'
 import BoletimAposta from '@/components/Boletim.vue'
 import MenuBar from '@/components/MenuBar.vue'
-import FooterApp from '@/components/Footer.vue'
+import Footer from '@/components/Footer.vue'
 export default {
   name: 'HomeView',
   components: {
-    ComHeader,
+    Header,
     ContentTop,
     MenuBar,
     TabelaMain,
     Picture,
     BoletimAposta,
-    FooterApp
+    Footer
   },
   data(){
     return{
