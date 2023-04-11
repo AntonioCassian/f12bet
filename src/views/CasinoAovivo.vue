@@ -1,21 +1,24 @@
 <template>
     <div class="Casinoaovivo">
-      <ComHeader />
+      <Header />
       Cassino Ao Vivo
     </div>
 </template>
   
 <script>
-  import ComHeader from '@/components/Header.vue'
-  
+  import Header from '@/components/Header.vue'
 export default {
     name: 'CasinoAovivo',
     components: {
-          ComHeader
+          Header
+          
     }
 }
 </script>
   
-<style>
-  
+<style scoped>
+  .cassinoaovivo{
+    height: 100vh;
+    background: rgba(65, 49, 50, 0.133);
+  }
 </style>

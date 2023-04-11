@@ -2,9 +2,10 @@
     <header class="component-header">
         <NavBar />
         <div class="btns">
-            <button class="btn1">ENTRAR</button>
+            <button class="btn1" @click="isOpen = !isOpen">ENTRAR</button>
             <button class="btn1 btn2" @click="register">Registro</button>
         </div>
+        <Login v-show="isOpen" />
     </header>
     <LineTop />
     
@@ -13,16 +14,23 @@
 <script>
 import NavBar from './templates/Navbar.vue'
 import LineTop from './templates/LineTop.vue'
+import Login from './Login.vue'
 export default {
     name: 'CompHeader',
+    data() {
+        return{
+            isOpen: false
+        }
+    },
     components: {
         NavBar,
-        LineTop
+        LineTop,
+        Login
     },
     methods: {
         register(){
             this.$router.push({path:'/register'})
-        }
+        },
     }
 }
 </script>

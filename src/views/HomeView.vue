@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    
     <Header />
     <div class="container">
       <aside>
@@ -31,6 +32,7 @@ import TabelaMain from '@/components/Table.vue'
 import BoletimAposta from '@/components/Boletim.vue'
 import MenuBar from '@/components/MenuBar.vue'
 import Footer from '@/components/Footer.vue'
+
 export default {
   name: 'HomeView',
   components: {

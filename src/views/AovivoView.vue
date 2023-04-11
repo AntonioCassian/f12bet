@@ -1,17 +1,17 @@
 <template>
   <div class="aovivo">
     <ComHeader />
-    Aovivo
+    <Login />
   </div>
 </template>
 
 <script>
 import ComHeader from '@/components/Header.vue'
-
+import Login from '@/components/Login.vue'
 export default {
     name: 'AovivoView',
     components: {
-        ComHeader
+        ComHeader, Login
     }
 }
 </script>
